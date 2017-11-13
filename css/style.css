@@ -1,0 +1,203 @@
+body{
+background-color: grey;
+}
+.square {
+width:80px;
+height:80px;
+margin:30px auto;
+background-color:purple;
+
+-webkit-animation:spin 4s linear 1s infinite alternate;
+-moz-animation:spin 4s linear 1s infinite alternate;
+-o-animation:spin 4s linear 1s infinite alternate;
+	animation: spin 4s linear 1s infinite alternate;/*Короткий запис даноъ анімації*/
+/*animation-name: spin;
+animation-duration:4s;
+animation-timing-function: linear;
+animation-delay:1s;
+animation-iteration-count: infinite;*//*Ккількість циклів анімації*/
+/*animation-direction: alternate;*//*reverse and normal*/
+
+}
+.square:hover{
+	animation-play-state: paused;
+}
+@keyframes spin{
+	/*from*/0%{
+	transform: rotate(0deg);
+	}
+	25%{
+	background-color: green;	
+	}
+	50%{
+	background-color: red;	
+	}
+	/*to*/100% {
+	transform: rotate(720deg);
+	}
+}
+/*Loader-1*/
+.container{
+width: 300px;
+height: 25px;
+border: 2px solid yellow;
+background-color: green;
+-webkit-border-radius: 8px;
+		border-radius: 8px;
+margin: 50px auto;
+	box-shadow:0px 3px 15px purple;
+	  overflow: hidden;
+}
+.bar{
+width: 400px;
+height: 25px;
+background:repeating-linear-gradient(
+	45deg, rgba(255,255,255,.9) 0,
+	rgba(255,255,255,.9) 5px,
+	transparent 5px, transparent 10px);
+
+-webkit-animation:loading 3s linear infinite;
+-moz-animation:loading 3s linear infinite;
+-o-animation:loading 3s linear infinite;
+animation:loading 3s linear infinite;
+
+}
+
+@keyframes loading {
+
+	from{
+		margin-left:0;
+	}
+
+	50%{
+		opacity:0;
+	}
+
+	to{
+		margin-left:-100px;
+	}
+
+}/*Loader-1 Ends*/
+/*Loader-2 Begins*/
+
+
+.loader-container{
+width:200px;
+margin:0 auto;
+}
+.loader-2 ul{
+position:absolute;
+display:flex;
+}
+ ul li {
+padding: 0;
+list-style:none;
+width:6px;
+height:20px;
+background:#f46b42;
+margin:0 3px; 
+animation:animate 0.7s infinite alternate;
+border-radius:6px;
+}
+@keyframes animate {
+	10%{
+	transform: scaleY(1);
+	background:#f44141;
+	}
+	20%{
+	transform: scaleY(1);
+	background:#f4a941;	
+	}
+	30%{
+	transform: scaleY(1);
+	background:#f4ee41;	
+	}
+	40%{
+	transform: scaleY(1);
+	background:#a9f441;	
+	}
+	50%{
+	transform: scaleY(1);
+	background:#52f441;	
+	}
+	60%{
+	transform: scaleY(1);
+	background:#20fce6;	
+	}
+	70%{
+	transform: scaleY(1);
+	background:#0828cc;	
+	}
+	80%{
+	transform: scaleY(1);
+	background:#d606cb;	
+	}
+	90%{
+	transform: scaleY(3);
+	background:#d60617;	
+	}
+	100%{
+	transform: scaleY(4);
+	background:#f44141;	
+	}
+}
+
+ul li:nth-child(1) {
+
+}
+ul li:nth-child(2) {
+animation-delay: .2s;
+}
+ul li:nth-child(3) {
+animation-delay: .3s;
+}
+ul li:nth-child(4) {
+animation-delay: .4s;
+}
+ul li:nth-child(5) {
+animation-delay: .5s;
+}
+ul li:nth-child(6) {
+animation-delay: .6s;
+}
+ul li:nth-child(7) {
+animation-delay: .7s;
+}
+ul li:nth-child(8) {
+animation-delay: .8s;
+}
+ul li:nth-child(9) {
+animation-delay: .9s;
+}
+ul li:nth-child(10) {
+animation-delay: .0s;
+}
+/*Loader-2 Ends*/
+
+/*loader-3 Begins*/
+
+.cloader-3{
+
+margin:130px auto;
+border:16px solid #cef442;
+border-radius:50%;
+border-top: 16px solid red;
+width:120px;
+height:120px;
+animation:ringloader;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear; 
+animation-direction: reverse;
+}
+@keyframes ringloader {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.loader-4{
+	
+}
